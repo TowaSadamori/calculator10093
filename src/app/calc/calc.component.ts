@@ -8,14 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './calc.component.scss'
 })
 export class CalcComponent implements OnInit{
-  title: string = '';
-  message: string = '';
+  title: string = 'Calculator10093';
+  message: string = 'ボタンをクリック';
+  count:number = 0;
 
 
   construcutor() { }
 
-  ngOnInit() {
-    this.title = 'Calculator10093';
-    this.message = '電卓アプリです。';
+  ngOnInit() { }
+  
+  doClick() {
+    this.message = ++this.count + "回、クリックしました。";
   }
 }
